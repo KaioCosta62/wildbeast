@@ -18,6 +18,7 @@ a{
 img{
   display: block;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 body{
@@ -101,10 +102,28 @@ body{
   grid-area: content;
 }
 
+
+/* Anuncios */
+
 .anuncios{
   grid-area: anuncios;
+  background: #fafbfc;
+  display: grid;
+  align-content: flex-start;
+  gap: 30px;
+  padding: 30px;
 }
 
+
+/* Footer */
 .footer{
   grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+}
+
+.footer p{
+  text-align: center;
+  color: #fff;
+  font-size: 1.125em;
 }
