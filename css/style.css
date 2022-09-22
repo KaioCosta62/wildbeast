@@ -15,9 +15,72 @@ a{
 }
 
 img{
-  max-width: 100px;
+  display: block;
+  max-width: 100%;
 }
 
 body{
   font-family: 'Vollkorn', 'Arial', sans-serif;
+}
+
+/* Grid geral do projeto */
+
+.estrutura{
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas: 
+   "header header header"
+   "sidenav content anuncios"
+   "footer footer footer"
+  ;
+}
+
+/* Header */
+
+.header{
+  grid-area: header;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.header .logo{
+  max-width: 200px;
+}
+
+.header nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header nav a{
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 1.125em;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 300ms ease;
+}
+
+.header nav a:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+.sidenav{
+  grid-area: sidenav;
+}
+
+.content{
+  grid-area: content;
+}
+
+.anuncios{
+  grid-area: anuncios;
+}
+
+.footer{
+  grid-area: footer;
 }
